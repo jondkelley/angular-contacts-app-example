@@ -31,11 +31,14 @@ export class AppComponent implements OnInit {
     var apikey = 'CHANGE___ME___';
 
     // Defaults to false, when true ensures meta object will be searchable
+    //@ts-ignore
     options.index_meta = true;
 
     // Add tags in array or comma-separated string format:
+    //@ts-ignore
     options.tags = ['logging', 'nodejs', 'logdna'];
     // or:
+    //@ts-ignore
     options.tags = 'logging,nodejs,logdna';
 
     // Create multiple loggers with different options
