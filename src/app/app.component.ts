@@ -23,5 +23,25 @@ export class AppComponent implements OnInit {
   constructor(private store: Store<fromRoot.State>) {}
 
   ngOnInit() {
+    // create a lifecycle hook for LogDNA?
+    // angular.io/guide/lifecycle-hooks
+    var Logger = require('logdna');
+    var options = {};
+
+    var apikey = 'CHANGE___ME___';
+
+    // Defaults to false, when true ensures meta object will be searchable
+    options.index_meta = true;
+
+    // Add tags in array or comma-separated string format:
+    options.tags = ['logging', 'nodejs', 'logdna'];
+    // or:
+    options.tags = 'logging,nodejs,logdna';
+
+    // Create multiple loggers with different options
+    var logger = Logger.createLogger(apikey, options);
+
+    // Test logging
+    logger.log('Angular ngOnInit() ....');
   }
 }
