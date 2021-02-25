@@ -18,7 +18,7 @@
       "dom"
     ],
     "paths": {
-
+      "os": ["src/emtpy.ts"],
       "@app/core/*": ["src/app/core/*"],
 
       "@app/root-store/*": ["src/app/store/*"],
